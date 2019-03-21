@@ -1,0 +1,79 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::ApiGateway::Authorizer
+
+Resources:
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        ZipFile: |
+          exports.handler =  function(event, context, callback) {
+              var token = event.authorizationToken;
+              switch (token.toLowerCase()) {
+                  case 'allow':
+                      callback(null, generatePolicy('user', 'Allow', event.methodArn));
+                      break;
+                  case 'deny':
+                      callback(null, generatePolicy('user', 'Deny', event.methodArn));
+                      break;
+                  case 'unauthorized':
+                      callback("Unauthorized");   // Return a 401 Unauthorized response
+                      break;
+                  default:
+                      callback("Error: Invalid token");
+              }
+          };
+
+          // Help function to generate an IAM policy
+          var generatePolicy = function(principalId, effect, resource) {
+              var authResponse = {};
+
+              authResponse.principalId = principalId;
+              if (effect && resource) {
+                  var policyDocument = {};
+                  policyDocument.Version = '2012-10-17';
+                  policyDocument.Statement = [];
+                  var statementOne = {};
+                  statementOne.Action = 'execute-api:Invoke';
+                  statementOne.Effect = effect;
+                  statementOne.Resource = resource;
+                  policyDocument.Statement[0] = statementOne;
+                  authResponse.policyDocument = policyDocument;
+              }
+
+              // Optional output with custom properties of the String, Number or Boolean type.
+              authResponse.context = {
+                  "stringKey": "stringval",
+                  "numberKey": 123,
+                  "booleanKey": true
+              };
+              return authResponse;
+          }
+      Runtime: nodejs8.10
+
+  RestApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: RestApi
+
+  Authorizer:
+    Type: AWS::ApiGateway::Authorizer
+    Properties:
+      RestApiId: !Ref RestApi
+      Name: foo
+      Type: TOKEN
+      AuthorizerUri: !Join ["", ["arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/", !GetAtt LambdaFunction.Arn, "/invocations"]]
+      IdentitySource: method.request.header.foobar

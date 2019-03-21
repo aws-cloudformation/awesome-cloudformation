@@ -1,0 +1,6 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::Logs::LogGroup
+
+Resources:
+  LogGroup:
+    Type: AWS::Logs::LogGroup

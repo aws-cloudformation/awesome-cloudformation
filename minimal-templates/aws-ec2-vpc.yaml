@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::EC2::VPC
+
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      CidrBlock: 192.168.0.0/24

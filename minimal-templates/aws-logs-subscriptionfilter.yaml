@@ -1,0 +1,56 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::Logs::SubscriptionFilter
+
+Resources:
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: LogGroup
+
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        ZipFile: |
+          var zlib = require('zlib');
+          exports.handler = function(input, context) {
+              var payload = new Buffer(input.awslogs.data, 'base64');
+              zlib.gunzip(payload, function(e, result) {
+                  if (e) {
+                      context.fail(e);
+                  } else {
+                      result = JSON.parse(result.toString('ascii'));
+                      console.log("Event Data:", JSON.stringify(result, null, 2));
+                      context.succeed();
+                  }
+              });
+          };
+      Runtime: nodejs8.10
+
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt LambdaFunction.Arn
+      Action: lambda:InvokeFunction
+      Principal: logs.us-east-1.amazonaws.com
+      SourceArn: !Sub "arn:aws:logs:us-east-1:${AWS::AccountId}:log-group:LogGroup:*"
+      SourceAccount: !Sub ${AWS::AccountId}
+
+  SubscriptionFilter:
+    Type: AWS::Logs::SubscriptionFilter
+    Properties:
+      LogGroupName: !Ref LogGroup
+      FilterPattern: "{$.userIdentity.type = Root}"
+      DestinationArn: !GetAtt LambdaFunction.Arn

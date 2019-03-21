@@ -1,0 +1,6 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::SNS::Topic
+
+Resources:
+  Topic:
+    Type: AWS::SNS::Topic

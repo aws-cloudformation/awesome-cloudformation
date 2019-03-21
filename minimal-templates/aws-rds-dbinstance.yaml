@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::RDS::DBInstance
+
+Parameters:
+  MasterUserPassword:
+    NoEcho: true
+    Type: String
+    MinLength: 12
+    MaxLength: 40
+    AllowedPattern: ^[a-zA-Z0-9]*$
+    Description: The database master user password
+
+  DBInstanceClass:
+    Type: String
+    Default: db.t2.micro
+    Description: Choose an database instance type that is available in your region
+
+Resources:
+  DBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      AllocatedStorage: "100"
+      DBInstanceClass: !Ref DBInstanceClass
+      Engine: postgres
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      MasterUsername: guest
+      MasterUserPassword: !Ref MasterUserPassword

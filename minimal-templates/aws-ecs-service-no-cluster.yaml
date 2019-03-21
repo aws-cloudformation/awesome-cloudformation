@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::ECS::Service without an associated AWS::ECS::Cluster
+
+Resources:
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      ContainerDefinitions:
+        - Name: foo
+          Image: alpine
+          Memory: 256
+
+  Service:
+    Type: AWS::ECS::Service
+    Properties:
+      TaskDefinition: !Ref TaskDefinition
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      DesiredCount: 0

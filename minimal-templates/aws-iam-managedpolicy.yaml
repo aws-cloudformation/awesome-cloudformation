@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::IAM::ManagedPolicy
+
+Resources:
+  Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - sts:AssumeRole
+            # WARNING: these are not sane defaults for production; this is a minimal example
+            Resource: !Sub arn:aws:iam::${AWS::AccountId}:user/Alice

@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::CloudWatch::Alarm
+
+Resources:
+  Alarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      ComparisonOperator: LessThanThreshold
+      EvaluationPeriods: 3
+      MetricName: UserErrors
+      Namespace: foo
+      Period: 120
+      Threshold: 4.2
+      Statistic: SampleCount

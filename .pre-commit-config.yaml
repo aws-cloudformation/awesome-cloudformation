@@ -1,0 +1,18 @@
+exclude: ^(buildspec.yml|.pre-commit-config.yaml)$
+repos:
+- repo: https://github.com/aws-cloudformation/cfn-python-lint
+  rev: v0.16.0
+  hooks:
+  - id: cfn-python-lint
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.0.0
+  hooks:
+  - id: check-byte-order-marker
+    types: [text]  # https://github.com/pre-commit/pre-commit-hooks/issues/371
+  - id: check-case-conflict
+  - id: check-executables-have-shebangs
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+    args:
+    - --fix=no
+  - id: trailing-whitespace

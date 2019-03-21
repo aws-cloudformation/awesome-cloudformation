@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::ElasticLoadBalancingV2::Listener
+
+Parameters:
+  AvailabilityZoneOne:
+    Type: AWS::EC2::AvailabilityZone::Name
+
+  AvailabilityZoneTwo:
+    Type: AWS::EC2::AvailabilityZone::Name
+
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      CidrBlock: 192.168.0.0/24
+
+  SubnetAZ1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      CidrBlock: 192.168.0.0/28
+      AvailabilityZone: !Ref AvailabilityZoneOne
+
+  SubnetAZ2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VPC
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      CidrBlock: 192.168.0.16/28
+      AvailabilityZone: !Ref AvailabilityZoneTwo
+
+  LoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Subnets:
+      - Ref: SubnetAZ1
+      - Ref: SubnetAZ2
+      Scheme: internal
+
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Port: 6666
+      Protocol: HTTP
+      VpcId: !Ref VPC
+
+  Listener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 8000
+      Protocol: HTTP

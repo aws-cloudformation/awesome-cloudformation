@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::Events::Rule with an event pattern
+
+Resources:
+  Rule:
+    Type: AWS::Events::Rule
+    Properties:
+      EventPattern:
+        detail:
+          userIdentity:
+            type:
+              - "Root"

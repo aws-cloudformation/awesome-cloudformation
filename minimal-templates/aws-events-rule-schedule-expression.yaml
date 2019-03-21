@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::Events::Rule with a schedule expression
+
+Resources:
+  Rule:
+    Type: AWS::Events::Rule
+    Properties:
+      ScheduleExpression: "rate(10 minutes)"

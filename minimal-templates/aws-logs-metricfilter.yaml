@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Minimal template to create AWS::Logs::MetricFilter
+
+Resources:
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+
+  MetricFilter:
+    Type: AWS::Logs::MetricFilter
+    Properties:
+      # WARNING: these are not sane defaults for production; this is a minimal example
+      FilterPattern: "[ip, identity, user_id, timestamp, request, status_code = 404, size]"
+      LogGroupName: !Ref LogGroup
+      MetricTransformations:
+      - MetricValue: "1"
+        MetricNamespace: WebServer/404s
+        MetricName: 404Count
