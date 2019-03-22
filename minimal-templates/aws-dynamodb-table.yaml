@@ -11,7 +11,4 @@ Resources:
       KeySchema:
         - AttributeName: id
           KeyType: HASH
-      # WARNING: these are not sane defaults for production; this is a minimal example
-      ProvisionedThroughput:
-        ReadCapacityUnits: 2
-        WriteCapacityUnits: 2
+      BillingMode: PAY_PER_REQUEST
