@@ -44,8 +44,8 @@ Resources:
     Properties:
       FunctionName: !GetAtt LambdaFunction.Arn
       Action: lambda:InvokeFunction
-      Principal: logs.us-east-1.amazonaws.com
-      SourceArn: !Sub "arn:aws:logs:us-east-1:${AWS::AccountId}:log-group:LogGroup:*"
+      Principal: !Sub logs.${AWS::Region}.amazonaws.com
+      SourceArn: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:LogGroup:*"
       SourceAccount: !Sub ${AWS::AccountId}
 
   SubscriptionFilter:
