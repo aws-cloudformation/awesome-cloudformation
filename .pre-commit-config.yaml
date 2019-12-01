@@ -1,0 +1,17 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.0.0
+  hooks:
+  - id: check-case-conflict
+  - id: detect-private-key
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+    args:
+    - --fix=lf
+  - id: trailing-whitespace
+  - id: pretty-format-json
+    args:
+    - --autofix
+    - --indent=4
+    - --no-sort-keys
+  - id: check-merge-conflict
