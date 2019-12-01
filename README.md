@@ -4,10 +4,11 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 
 ## Contents
 
-- [CloudFormation Sample Templates](#clodformation-sample-templates)
+- [CloudFormation Sample Templates](#cloudformation-sample-templates)
 - [Authoring & Testing Tools](#authoring--testing-tools)
 - [CLI Tools](#cli-tools)
 - [Code Generation](#code-generation)
+- [Custom Resource Development](#custom-resource-development)
 - [Public Coverage Roadmap](#public-coverage-roadmap)
 - [Blog Posts & Talks](#blog-posts--talks)
 
@@ -69,7 +70,7 @@ The Public Coverage Roadmap is supported by the AWS CloudFormation team to help 
 
 Our community is our most powerful tool, and the following are hand picked submissions from some of our favourite contributors.
 
-- [YAML Is Better than Your Favorite Language: Fightin' words about Infrastructure as code | Ben Kehoe](https://acloud.guru/series/serverlessconf-nyc-2019/view/yaml-better) by Ben Kehoe
+- [YAML Is Better than Your Favorite Language: Fightin' words about Infrastructure as code](https://acloud.guru/series/serverlessconf-nyc-2019/view/yaml-better) by Ben Kehoe
 - [AWS CloudFormation Custom Resource Types: A Walkthrough](https://onecloudplease.com/blog/aws-cloudformation-custom-resource-types-a-walkthrough) by Ian McKay
 
 
