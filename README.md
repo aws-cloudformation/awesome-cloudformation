@@ -76,7 +76,7 @@ Our community is our most powerful tool, and the following are hand picked submi
 
 ## Contribute
 
-Contributions welcome! Read the [contribution guidelines](contributing.md) first.
+Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first.
 
 ## License Summary
 
