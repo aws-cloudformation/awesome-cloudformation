@@ -82,7 +82,7 @@ CloudFormation's [public documentation](https://docs.aws.amazon.com/cloudformati
 
 ## Contribute
 
-Contributions welcome! Read the [contribution guidelines](contributing.md) first.
+Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first.
 
 ## License Summary
 
