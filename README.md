@@ -4,14 +4,21 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 
 ## Contents
 
+- [Awesome CloudFormation <img src="https://awesome.re/badge.svg" alt="Awesome">](#awesome-cloudformation-img-src%22httpsawesomerebadgesvg%22-alt%22awesome%22)
+- [Contents](#contents)
 - [CloudFormation Sample Templates](#cloudformation-sample-templates)
-- [Authoring & Testing Tools](#authoring--testing-tools)
+- [Authoring &amp; Testing Tools](#authoring-amp-testing-tools)
 - [CLI Tools](#cli-tools)
 - [Code Generation](#code-generation)
 - [Custom Resource Development](#custom-resource-development)
 - [Public Coverage Roadmap](#public-coverage-roadmap)
-- [Blog Posts & Talks](#blog-posts--talks)
+- [Blog Posts &amp; Talks](#blog-posts-amp-talks)
 - [Documentation](#documentation)
+  - [Reference Guides](#reference-guides)
+    - [AWS](#aws)
+    - [3rd parties](#3rd-parties)
+- [Contribute](#contribute)
+- [License Summary](#license-summary)
 
 ## CloudFormation Sample Templates
 
@@ -46,6 +53,7 @@ If you prefer imperative coding, or just using your favourite programming langua
 
 - [aws-cdk](https://github.com/aws/aws-cdk): The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to define cloud infrastructure in code and provision it through AWS CloudFormation.
 - [serverless-application-model](https://github.com/awslabs/serverless-application-model): The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. It provides shorthand syntax to express functions, APIs, databases, and event source mappings. With just a few lines of configuration, you can define the application you want and model it.
+- [eksctl](https://github.com/weaveworks/eksctl): A CLI tool that uses CloudFormation to create clusters on EKS.
 - [mu](https://github.com/stelligent/mu): Similar to how the Serverless Framework improved the developer experience of Lambda and API Gateway, this tool makes it easier for developers to use EKS or ECS as a microservices platform.
 - [OpenJS Architect](https://github.com/architect/architect): Generate AWS CloudFormation and AWS Serverless Application Model code from a very terse and friendly high level manifest file written in `JSON`, `YAML`, `TOML` or `.arc` format
 - [troposphere (Python)](https://github.com/cloudtools/troposphere): The troposphere library allows for easier creation of the AWS CloudFormation JSON by writing Python code to describe the AWS resources. troposphere also includes some basic support for OpenStack resources via Heat.
