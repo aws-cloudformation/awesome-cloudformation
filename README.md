@@ -46,6 +46,7 @@ This section contains tools which have been designed to improve the experiene of
 - [awscfncli](https://github.com/Kotaimen/awscfncli): awscfncli helps build and manage complex AWS CloudFormation stacks.
 - [stacker](https://github.com/cloudtools/stacker): An AWS CloudFormation Stack orchestrator/manager.
 - [sceptre](https://github.com/Sceptre/sceptre): Sceptre is a tool to drive AWS CloudFormation. It automates the mundane, repetitive and error-prone tasks, enabling you to concentrate on building better infrastructure.
+- [cf-merge](https://github.com/magicmark/cf-merge): A tool to split up & merge CloudFormation templates together with import syntax.
 
 ## Code Generation
 
