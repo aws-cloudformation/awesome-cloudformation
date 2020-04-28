@@ -11,6 +11,7 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 - [CLI Tools](#cli-tools)
 - [Code Generation](#code-generation)
 - [Custom Resource Development](#custom-resource-development)
+- [Third Party Resource Types](#third-party-resource-types)
 - [Public Coverage Roadmap](#public-coverage-roadmap)
 - [Blog Posts and Talks](#blog-posts-and-talks)
 - [Documentation](#documentation)
@@ -73,6 +74,19 @@ When you need to extend AWS CloudFormation to support your own personal or organ
 - [cloudformation-cli-java-plugin](https://github.com/aws-cloudformation/cloudformation-cli-java-plugin): The CloudFormation Provider Development Toolkit Java Plugin allows you to autogenerate Java code based on an input schema.
 - [cloudformation-cli-python-plugin](https://github.com/aws-cloudformation/cloudformation-cli-python-plugin): The CloudFormation Provider Development Toolkit Python Plugin allows you to autogenerate Python code based on an input schema.
 - [custom-resource-helper](https://github.com/aws-cloudformation/custom-resource-helper): Simplify best practice Custom Resource creation, sending responses to CloudFormation and providing exception, timeout trapping, and detailed configurable logging.
+
+## Third Party Resource Types
+
+The following third-party vendors have created resource types using the CloudFormation CLI and can be downloaded and added to your accounts via the Registry.
+
+- [Atlassian](https://github.com/opsgenie/opsgenie-cloudformation-resources) Creates Atlassian::Opsgenie::User, Atlassian::Opsgenie::Team, and Atlassian::Opsgenie::Integration
+- [Datadog](https://github.com/DataDog/datadog-cloudformation-resources#resources-available) Creates Datadog::Integrations::AWS, Datadog::Monitors::Monitor, Datadog::Monitors::Downtime, and Datadog::IAM::User
+- [Densify](https://github.com/densify-dev/cloudformation-optimization-as-code) Creates Densify::Optimization::Recommendation
+- [Dynatrace](https://github.com/mnalezin/DynatraceInstallerAgent) Creates Dynatrace::Installer::Agent
+- [Fortinet](https://github.com/fortinet/aws-cloudformation-resource-provider) Creates Fortinet::FortiGate::SystemAdmin, Fortinet::FortiGate::SystemDns, and Fortinet::FortiGate::SystemInterface
+- [NewRelic](https://github.com/newrelic/cloudformation-partner-integration) Creates NewRelic::Alerts::NrqlAlert
+- [Spotinst](https://github.com/spotinst/spotinst-aws-cloudformation-registry) Creates Spotinst::Elastigroup::Group
+
 
 ## Public Coverage Roadmap
 
