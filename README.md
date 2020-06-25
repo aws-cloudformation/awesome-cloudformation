@@ -37,7 +37,7 @@ These tools are designed to assist in the authoring and testing process for AWS 
 - [AWSConsoleRecorder](https://github.com/iann0036/AWSConsoleRecorder): Records actions made in the AWS Management Console and outputs the equivalent CLI/SDK commands and CloudFormation/Terraform templates.
 - [Former2](https://github.com/iann0036/former2): Generate CloudFormation / Terraform / Troposphere templates from your existing AWS resource
 - [cfn-python-lint](https://github.com/aws-cloudformation/cfn-python-lint): Validate CloudFormation yaml/json templates against the CloudFormation spec and additional checks. Includes checking valid values for resource properties and best practices.
-- [cloudformation-guard](https://github.com/aws-cloudformation/cloudformation-guard): A set of tools to check AWS CloudFormation templates for policy compliance using a simple, policy-as-code, declarative syntax
+- [cfn-guard](https://github.com/aws-cloudformation/cloudformation-guard): A set of tools to check AWS CloudFormation templates for policy compliance using a simple, policy-as-code, declarative syntax
 - [Visual Studio Code extension](https://github.com/aws-cloudformation/aws-cfn-lint-visual-studio-code): CloudFormation Linter integration, autocompletion, reference documentation links on hover
 - [cfn_nag](https://github.com/stelligent/cfn_nag): The cfn-nag tool looks for patterns in CloudFormation templates that may indicate insecure infrastructure.
 - [taskcat](https://github.com/aws-quickstart/taskcat): taskcat is a tool that tests AWS CloudFormation templates. It deploys your AWS CloudFormation template in multiple AWS Regions and generates a report with a pass/fail grade for each region.
