@@ -45,13 +45,14 @@ These tools are designed to assist in the authoring and testing process for AWS 
 - [cfn checklist](https://cfnchecklist.com/): a list of of things to look out for before launching your infrastructure to production.
 - [cfn flip](https://cfnflip.com/): a tool that converts AWS CloudFormation templates between JSON and YAML formats.
 
-## CLI Tools
+## Stack Management Tools
 
-This section contains tools which have been designed to improve the experiene of interacting with the CloudFormation service through a terminal session.
+This section contains tools which have been designed to improve the experiene of interacting with the CloudFormation service through a terminal session or build pipeline.
 
 - [awscfncli](https://github.com/Kotaimen/awscfncli): awscfncli helps build and manage complex AWS CloudFormation stacks.
 - [stacker](https://github.com/cloudtools/stacker): An AWS CloudFormation Stack orchestrator/manager.
 - [sceptre](https://github.com/Sceptre/sceptre): Sceptre is a tool to drive AWS CloudFormation. It automates the mundane, repetitive and error-prone tasks, enabling you to concentrate on building better infrastructure.
+- [AWS Deployment Framework (ADF)](https://github.com/awslabs/aws-deployment-framework): The AWS Deployment Framework (ADF) is an extensive and flexible framework to manage and deploy resources across multiple AWS accounts and regions within an AWS Organization.
 
 ## Code Generation
 
