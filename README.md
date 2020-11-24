@@ -6,7 +6,9 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 
 - [Awesome CloudFormation <img src="https://awesome.re/badge.svg" alt="Awesome">](#awesome-cloudformation-img-src%22httpsawesomerebadgesvg%22-alt%22awesome%22)
 - [Contents](#contents)
-- [CloudFormation Sample Templates](#cloudformation-sample-templates)
+- [CloudFormation Samples](#cloudformation-samples)
+  - [Templates](#templates)
+  - [Modules](#modules)
 - [Authoring and Testing Tools](#authoring-and-testing-tools)
 - [CLI Tools](#cli-tools)
 - [Code Generation](#code-generation)
@@ -21,14 +23,18 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 - [Contribute](#contribute)
 - [License Summary](#license-summary)
 
-## CloudFormation Sample Templates
+## CloudFormation Samples
 
-The following are pre-built sample templates demonstrating how to use AWS CloudFormation to construct various canned applications or resource groupings.
+The following are pre-built CloudFormation Samples demonstrating how to use AWS CloudFormation to construct various canned resources, modules, applications or resource groupings.
 
+### Templates
 - [aws-cf-templates](https://github.com/widdix/aws-cf-templates): Free Templates for AWS CloudFormation
 - [aws-cloudformation-templates](https://github.com/awslabs/aws-cloudformation-templates): Sample AWS CloudFormation templates which are intended to support learning how to declare specific AWS resources or solve particular use cases.
 - [aws-quickstart](https://github.com/aws-quickstart): Automated gold-standard deployments on AWS
 - [asecure.cloud](https://asecure.cloud/): A free repository of customizable AWS security configurations and best practices
+
+### Modules
+- [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/modules): Reusable CloudFormation modules to jump start your collection.
 
 ## Authoring and Testing Tools
 
