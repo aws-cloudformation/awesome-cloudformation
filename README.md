@@ -50,6 +50,7 @@ These tools are designed to assist in the authoring and testing process for AWS 
 - [org-formation](https://github.com/OlafConijn/AwsOrganizationFormation): a tool that helps you write CloudFormation for your AWS Organization resources and create links between regular cloudformation resources across your accounts and regions.
 - [cfn checklist](https://cfnchecklist.com/): a list of of things to look out for before launching your infrastructure to production.
 - [cfn flip](https://cfnflip.com/): a tool that converts AWS CloudFormation templates between JSON and YAML formats.
+- [cfn-diagram](https://github.com/mhlabs/cfn-diagram): CLI tool to visualise CloudFormation templates as diagrams.
 
 ## CLI Tools
 
