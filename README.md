@@ -51,6 +51,7 @@ These tools are designed to assist in the authoring and testing process for AWS 
 - [cfn checklist](https://cfnchecklist.com/): a list of of things to look out for before launching your infrastructure to production.
 - [cfn flip](https://cfnflip.com/): a tool that converts AWS CloudFormation templates between JSON and YAML formats.
 - [cfn-diagram](https://github.com/mhlabs/cfn-diagram): CLI tool to visualise CloudFormation templates as diagrams.
+- [cfsec](https://cfsec.dev): CloudFormation static analysis to identify potential misconfigurations before they reach production.
 
 ## CLI Tools
 
