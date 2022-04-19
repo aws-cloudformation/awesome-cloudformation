@@ -9,11 +9,14 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 - [CloudFormation Samples](#cloudformation-samples)
   - [Templates](#templates)
   - [Modules](#modules)
+  - [Resource Types](#resource-types)
+  - [Hooks](#hooks)
 - [Authoring and Testing Tools](#authoring-and-testing-tools)
 - [CLI Tools](#cli-tools)
 - [Code Generation](#code-generation)
 - [Custom Resource Development](#custom-resource-development)
 - [Third Party Resource Types](#third-party-resource-types)
+- [Third Party Hooks](#third-party-hooks)
 - [Public Coverage Roadmap](#public-coverage-roadmap)
 - [Blog Posts and Talks](#blog-posts-and-talks)
 - [Documentation](#documentation)
@@ -35,6 +38,12 @@ The following are pre-built CloudFormation Samples demonstrating how to use AWS 
 
 ### Modules
 - [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/modules): Reusable CloudFormation modules to jump start your collection.
+
+### Resource Types
+- [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/resource-types): Sample CloudFormation Resource Types
+
+### Hooks
+- [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/hooks): Sample CloudFormation Hooks
 
 ## Authoring and Testing Tools
 
@@ -98,6 +107,9 @@ The following third-party vendors have created resource types using the CloudFor
 - [NewRelic](https://github.com/newrelic/cloudformation-partner-integration) Creates NewRelic::Alerts::NrqlAlert
 - [Spotinst](https://github.com/spotinst/spotinst-aws-cloudformation-registry) Creates Spotinst::Elastigroup::Group
 
+## Third Party Hooks
+
+- [Open Policy Agent](https://github.com/StyraInc/opa-aws-cloudformation-hook) Hook to allow policy-based decisions on stacks using [Open Policy Agent](https://www.openpolicyagent.org/)
 
 ## Public Coverage Roadmap
 
@@ -111,6 +123,7 @@ Our community is our most powerful tool, and the following are hand picked submi
 
 - [YAML Is Better than Your Favorite Language: Fightin' words about Infrastructure as code](https://acloud.guru/series/serverlessconf-nyc-2019/view/yaml-better) by Ben Kehoe
 - [AWS CloudFormation Custom Resource Types: A Walkthrough](https://onecloudplease.com/blog/aws-cloudformation-custom-resource-types-a-walkthrough) by Ian McKay
+- [The OPA AWS CloudFormation Hook](https://blog.styra.com/blog/the-opa-aws-cloudformation-hook)
 
 ## Documentation
 
