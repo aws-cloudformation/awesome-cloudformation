@@ -84,6 +84,8 @@ If you prefer imperative coding, or just using your favourite programming langua
 - [troposphere (Python)](https://github.com/cloudtools/troposphere): The troposphere library allows for easier creation of the AWS CloudFormation JSON by writing Python code to describe the AWS resources. troposphere also includes some basic support for OpenStack resources via Heat.
 - [sparkleformation (Ruby)](https://github.com/sparkleformation): A magical Ruby infrastructure orchestration DSL
 - [VaporShell (PowerShell)](https://github.com/scrthq/VaporShell): A PowerShell module for building, packaging and deploying AWS CloudFormation templates.
+- [cfndsl](https://github.com/cfndsl/cfndsl): Ruby DSL for generating AWS CloudFormation templates. 
+- [cfhihglander](https://github.com/theonestack/cfhighlander): Ruby DSL for generating AWS CloudFormation templates using Cfndsl in a modular and extensible manner
 
 ## Custom Resource Development
 
