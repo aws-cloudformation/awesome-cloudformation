@@ -68,6 +68,7 @@ This section contains tools which have been designed to improve the experience o
 - [awscfncli](https://github.com/Kotaimen/awscfncli): awscfncli helps build and manage complex AWS CloudFormation stacks.
 - [stacker](https://github.com/cloudtools/stacker): An AWS CloudFormation Stack orchestrator/manager.
 - [sceptre](https://github.com/Sceptre/sceptre): Sceptre is a tool to drive AWS CloudFormation. It automates the mundane, repetitive and error-prone tasks, enabling you to concentrate on building better infrastructure.
+- [stackup](https://github.com/realestate-com-au/stackup): Stackup provides a CLI and a simplified Ruby API for dealing with AWS CloudFormation stacks.
 - [cfn-teardown](https://github.com/nirdosh17/cfn-teardown): Cleanup CloudFormation stacks respecting the order of dependencies.
 - [rain](https://github.com/aws-cloudformation/rain): A command line tool for working with AWS CloudFormation. It has tools for creating, comparing, and formatting templates and a pleasant CLI experience for creating, updating, and deleting stacks.
 
