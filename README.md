@@ -17,6 +17,7 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 - [Custom Resource Development](#custom-resource-development)
 - [Third Party Resource Types](#third-party-resource-types)
 - [Third Party Hooks](#third-party-hooks)
+- [Macros](#macros)
 - [Public Coverage Roadmap](#public-coverage-roadmap)
 - [Blog Posts and Talks](#blog-posts-and-talks)
 - [Documentation](#documentation)
@@ -113,6 +114,10 @@ The following third-party vendors have created resource types using the CloudFor
 ## Third Party Hooks
 
 - [Open Policy Agent](https://github.com/StyraInc/opa-aws-cloudformation-hook) Hook to allow policy-based decisions on stacks using [Open Policy Agent](https://www.openpolicyagent.org/)
+
+## Macros
+
+- [pl.wrzasq.cform](https://rafalwrzeszcz-wrzasqpl.github.io/pl.wrzasq.cform/cform-macro/guide/deployment.html) Set of CloudFormation macros that aims to simplify template creation (available in AWS Serverless Application Repository as [`wrzasqpl-cform-macro`](https://serverlessrepo.aws.amazon.com/applications/eu-central-1/117504620086/wrzasqpl-cform-macro)).
 
 ## Public Coverage Roadmap
 
