@@ -72,6 +72,7 @@ This section contains tools which have been designed to improve the experience o
 - [stackup](https://github.com/realestate-com-au/stackup): Stackup provides a CLI and a simplified Ruby API for dealing with AWS CloudFormation stacks.
 - [cfn-teardown](https://github.com/nirdosh17/cfn-teardown): Cleanup CloudFormation stacks respecting the order of dependencies.
 - [rain](https://github.com/aws-cloudformation/rain): A command line tool for working with AWS CloudFormation. It has tools for creating, comparing, and formatting templates and a pleasant CLI experience for creating, updating, and deleting stacks.
+- [cfn-teleport](https://github.com/udondan/cfn-teleport): A command-line tool which can move CloudFormation resources between stacks.
 
 ## Code Generation
 
