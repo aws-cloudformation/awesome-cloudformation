@@ -4,8 +4,6 @@ A curated list of resources and projects for working with [AWS CloudFormation](h
 
 ## Contents
 
-- [Awesome CloudFormation <img src="https://awesome.re/badge.svg" alt="Awesome">](#awesome-cloudformation-img-src%22httpsawesomerebadgesvg%22-alt%22awesome%22)
-- [Contents](#contents)
 - [CloudFormation Samples](#cloudformation-samples)
   - [Templates](#templates)
   - [Modules](#modules)
@@ -33,9 +31,8 @@ The following are pre-built CloudFormation Samples demonstrating how to use AWS 
 
 ### Templates
 - [aws-cf-templates](https://github.com/widdix/aws-cf-templates): Free Templates for AWS CloudFormation
-- [aws-cloudformation-templates](https://github.com/awslabs/aws-cloudformation-templates): Sample AWS CloudFormation templates which are intended to support learning how to declare specific AWS resources or solve particular use cases.
-- [aws-quickstart](https://github.com/aws-quickstart): Automated gold-standard deployments on AWS
-- [asecure.cloud](https://asecure.cloud/): A free repository of customizable AWS security configurations and best practices
+- [aws-cloudformation-templates](https://github.com/aws-cloudformation/aws-cloudformation-templates): Sample AWS CloudFormation templates maintained by AWS
+- [aws-quickstart](https://github.com/aws-quickstart): Automated gold-standard deployments on AWS, with many partner product integrations
 
 ### Modules
 - [aws-cloudformation-samples](https://github.com/aws-cloudformation/aws-cloudformation-samples/tree/main/modules): Reusable CloudFormation modules to jump start your collection.
@@ -50,15 +47,14 @@ The following are pre-built CloudFormation Samples demonstrating how to use AWS 
 
 These tools are designed to assist in the authoring and testing process for AWS CloudFormation. Tools include template generation, linting and testing applications.
 
+- [cfn-lint](https://github.com/aws-cloudformation/cfn-python-lint): Validate CloudFormation yaml/json templates against the CloudFormation spec and additional checks. Includes checking valid values for resource properties and best practices. This is an indispensable tool and should be a part of every CloudFormation developer's workflow.
+- [CloudFormation Rain](https://github.com/aws-cloudformation/rain): A CLI for CloudFormation that makes it much easier to develop and deploy CloudFormation templates.
 - [AWSConsoleRecorder](https://github.com/iann0036/AWSConsoleRecorder): Records actions made in the AWS Management Console and outputs the equivalent CLI/SDK commands and CloudFormation/Terraform templates.
 - [Former2](https://github.com/iann0036/former2): Generate CloudFormation / Terraform / Troposphere templates from your existing AWS resource
-- [cfn-python-lint](https://github.com/aws-cloudformation/cfn-python-lint): Validate CloudFormation yaml/json templates against the CloudFormation spec and additional checks. Includes checking valid values for resource properties and best practices.
 - [cfn-guard](https://github.com/aws-cloudformation/cloudformation-guard): A set of tools to check AWS CloudFormation templates for policy compliance using a simple, policy-as-code, declarative syntax
 - [Visual Studio Code extension](https://github.com/aws-cloudformation/aws-cfn-lint-visual-studio-code): CloudFormation Linter integration, autocompletion, reference documentation links on hover
-- [cfn_nag](https://github.com/stelligent/cfn_nag): The cfn-nag tool looks for patterns in CloudFormation templates that may indicate insecure infrastructure.
 - [taskcat](https://github.com/aws-quickstart/taskcat): taskcat is a tool that tests AWS CloudFormation templates. It deploys your AWS CloudFormation template in multiple AWS Regions and generates a report with a pass/fail grade for each region.
 - [org-formation](https://github.com/OlafConijn/AwsOrganizationFormation): a tool that helps you write CloudFormation for your AWS Organization resources and create links between regular cloudformation resources across your accounts and regions.
-- [cfn flip](https://cfnflip.com/): a tool that converts AWS CloudFormation templates between JSON and YAML formats.
 - [cfn-diagram](https://github.com/ljacobsson/cfn-diagram): CLI tool to visualise CloudFormation/SAM/CDK templates as diagrams.
 - [cfsec](https://cfsec.dev): CloudFormation static analysis to identify potential misconfigurations before they reach production.
 
@@ -79,6 +75,7 @@ This section contains tools which have been designed to improve the experience o
 If you prefer imperative coding, or just using your favourite programming language, the following projects are intended to abstract the creation of AWS CloudFormation templates.
 
 - [aws-cdk](https://github.com/aws/aws-cdk): The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to define cloud infrastructure in code and provision it through AWS CloudFormation.
+- [CloudFormation Rain](https://github.com/aws-cloudformation/rain): The `rain build` command can be used in a variety of ways to generate templates. It has built-in recommended, vetted templates, and it also integrates with Amazon Bedrock for GenAI support.
 - [CloudFormation Snippets for VS Code](https://github.com/dannysteenman/cloudformation-yaml-snippets): This VS Code extension adds autocompletion for all the resources that AWS CloudFormation supports.
 - [serverless-application-model](https://github.com/awslabs/serverless-application-model): The AWS Serverless Application Model (SAM) is an open-source framework for building serverless applications. It provides shorthand syntax to express functions, APIs, databases, and event source mappings. With just a few lines of configuration, you can define the application you want and model it.
 - [eksctl](https://github.com/weaveworks/eksctl): A CLI tool that uses CloudFormation to create clusters on EKS.
@@ -92,7 +89,7 @@ If you prefer imperative coding, or just using your favourite programming langua
 
 ## Custom Resource Development
 
-When you need to extend AWS CloudFormation to support your own personal or organizational use-cases, the following tools are intended to support the development experience with the [original Custom Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html) functionality and the new [CloudFormation Registry](https://aws.amazon.com/about-aws/whats-new/2019/11/now-extend-aws-cloudformation-to-model-provision-and-manage-third-party-resources/) experience.
+When you need to extend AWS CloudFormation to support your own personal or organizational use-cases, the following tools are intended to support the development experience with [Custom Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html) functionality and the [CloudFormation Registry](https://aws.amazon.com/about-aws/whats-new/2019/11/now-extend-aws-cloudformation-to-model-provision-and-manage-third-party-resources/).
 
 - [cloudformation-cli](https://github.com/aws-cloudformation/cloudformation-cli): The CloudFormation Provider Development Toolkit allows you to author your own resource providers that can be used by CloudFormation.
 - [cloudformation-cli-go-plugin](https://github.com/aws-cloudformation/cloudformation-cli-go-plugin): The CloudFormation Provider Development Toolkit Go Plugin allows you to autogenerate Go code based on an input schema.
