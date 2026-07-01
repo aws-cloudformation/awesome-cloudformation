@@ -61,6 +61,7 @@ These tools are designed to assist in the authoring and testing process for AWS 
 - [cfn flip](https://cfnflip.com/): a tool that converts AWS CloudFormation templates between JSON and YAML formats.
 - [cfn-diagram](https://github.com/ljacobsson/cfn-diagram): CLI tool to visualise CloudFormation/SAM/CDK templates as diagrams.
 - [cfsec](https://cfsec.dev): CloudFormation static analysis to identify potential misconfigurations before they reach production.
+- [Shieldly](https://github.com/shieldly-io/cli): AI-powered security analysis for CloudFormation templates and IAM policies — explains why a permission or resource config is risky and how to fix it. Free tier, CLI and GitHub Action.
 
 ## CLI Tools
 
