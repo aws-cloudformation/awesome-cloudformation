@@ -61,6 +61,7 @@ These tools are designed to assist in the authoring and testing process for AWS 
 - [cfn flip](https://cfnflip.com/): a tool that converts AWS CloudFormation templates between JSON and YAML formats.
 - [cfn-diagram](https://github.com/ljacobsson/cfn-diagram): CLI tool to visualise CloudFormation/SAM/CDK templates as diagrams.
 - [cfsec](https://cfsec.dev): CloudFormation static analysis to identify potential misconfigurations before they reach production.
+- [CloudBurn](https://github.com/towardsthecloud/cloudburn): CLI that checks CloudFormation and Terraform templates for costly AWS configurations before deployment, with live AWS resource scanning.
 
 ## CLI Tools
 
